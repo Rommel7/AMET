@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  $(window).on('load', function() {
+    setTimeout(function() {
+      $('.loading-overlay').hide();
+    }, 1500);
+  });
+
   $('.owl-two').owlCarousel({
     items: 4,
     loop: true,

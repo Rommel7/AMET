@@ -1,0 +1,79 @@
+.main-margin {
+  margin: 50px 0px;
+}
+
+.static-img {
+  border: 2px solid $main-orange;
+  margin: 20px 0px;
+}
+
+.title {
+  font-size: $h1-24;
+  font-weight: bold;
+  color: $secondary-grey;
+  h1 {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $main-orange;
+  }
+}
+
+.content-text {
+  font-size: $link-14;
+  color: $main-black;
+  margin: 10px 0px;
+}
+
+.static-content {
+  .static-content-item {
+    h1 {
+      font-size: $h3-18;
+      font-weight: 700;
+
+      &::before {
+        content: '◽ ';
+      }
+    }
+    p {
+      font-size: $link-14;
+    }
+  }
+}
+
+// Page About Us
+
+.about-us {
+}
+
+// Page Safety Equipment
+.safety-equipment {
+  .excerpt {
+    text-indent: 20px;
+    margin: 20px 0px;
+    span {
+      font-weight: bold;
+    }
+  }
+  .excerpt-contact {
+    margin: 20px 0px;
+  }
+}
+
+.manpower {
+  .excerpt {
+    text-indent: 20px;
+    margin: 20px 0px;
+    span {
+      font-weight: bold;
+    }
+  }
+  .static-content {
+    margin-top: 15px;
+  }
+  h3 {
+    font-size: $h3-18;
+    font-weight: bold;
+    border-bottom: 1px solid $main-orange;
+    display: inline;
+  }
+}

@@ -1,202 +1,44 @@
-/* Fonts */
-@import 'fonts';
-
 /* Libraries */
 @import 'libs';
 
-// SCSS Varibles
-$main-font: 'Roboto', sans-serif;
-$main-white: #fff;
-$secondary-white: #eee;
-$main-orange: #fbba00;
-$secondary-orange: #ef7c00;
-$main-grey: #9c9d9d;
-$secondary-grey: #6f6f6e;
+/* Fonts */
+@import 'fonts';
 
-/* Global styles */
-::placeholder {
-  color: #666;
-}
-
-::selection {
-  background-color: $main-white;
-  color: $main-white;
-}
-
-body {
-  font-family: $main-font;
-  background-color: $main-white;
-}
-
-input,
-textarea {
-  border: #666 1px solid;
-  outline: none;
-  &:focus:required:invalid {
-    border-color: red;
-  }
-  &:required:valid {
-    border-color: green;
-  }
-}
-
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.text-center {
-  text-align: center;
-}
+/* Global Styles */
+@import 'global';
 
 /*================================
-             Global Styles            
+          Begin of Header
 ================================*/
 
-.textura {
-  background: url(../img/texture.png) #fff repeat;
-  width: 100%;
-  height: 4px;
-}
-
-.link {
-  color: $secondary-orange;
-  font-size: 15px;
-  line-height: 21px;
-  transition: 0.5 ease;
-  &:hover {
-    text-decoration: none;
-    color: #333;
-  }
-}
-
-.caption {
-  display: inline-block;
-  color: $secondary-grey;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 40px;
-  margin: 20px 0px;
-  margin-right: 10px;
-}
-
-.headline {
-  display: inline-block;
-  color: $secondary-grey;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 35px;
-  margin: 20px 0px;
-  padding: 20px 0px;
-  border-bottom: 3px solid $secondary-orange;
-  i {
-    font-size: 0.7em;
-    margin-left: 0.3em;
-  }
-}
-
-.subject {
-  color: $secondary-grey;
-  font-size: 20px;
-  font-weight: 100;
-  line-height: 22px;
-  padding-bottom: 5px;
-}
-
-.container-border-bottom {
-  border-bottom: 1px solid #9c9d9d;
-}
-
-.row-mg-3 {
-  margin: 3% 0%;
-}
-
-.owl-theme {
-  position: relative;
-  .owl-dots {
-    button {
-      outline: none;
-    }
-  }
-  .owl-nav {
-    position: absolute;
-    top: 5%;
-    left: 0;
-    font-size: 6em;
-    display: block;
-    width: 100%;
-    height: 0;
-    .owl-prev {
-      float: left;
-      margin-left: -3%;
-      cursor: default;
-      outline: none;
-      span {
-        color: $main-orange;
-        cursor: pointer;
-      }
-      &:hover {
-        background-color: transparent;
-      }
-    }
-    .owl-next {
-      float: right;
-      margin-right: -3%;
-      background-color: transparent;
-      color: $main-orange;
-      cursor: default;
-      outline: none;
-      span {
-        color: $main-orange;
-        cursor: pointer;
-      }
-      &:hover {
-        background-color: transparent;
-      }
-    }
-  }
-  .owl-dots {
-    margin-top: 30px;
-  }
-}
-
-/* ======  End of Nav Top  ====== */
-
-/*================================
-          Begin of Nav Top            
-================================*/
-
-.nav-top {
+.header {
   background-color: $secondary-grey;
-  .col-12 {
-    padding: 0;
-  }
   nav {
     background-color: $secondary-grey;
     color: $secondary-white;
-    height: 40px;
-    font-size: 14px;
+    height: 80px;
+    font-size: $nav-16;
     .navbar-nav {
       .nav-link {
         color: $secondary-white;
+        transition: 0.3s ease;
         &:hover {
-          color: $main-white;
-          transition: 0.5 ease;
+          color: $main-orange;
         }
         .show {
           color: $main-white;
         }
       }
       span {
-        line-height: 37px;
+        line-height: 40px;
         padding: 1em;
       }
       .dropdown-menu {
         display: block;
         visibility: hidden;
+
         .dropdown-item {
-          font-size: 14px;
+          font-size: $p-12;
         }
         &::before {
           display: inline-block;
@@ -216,253 +58,37 @@ textarea {
       .nav-item:hover .dropdown-menu {
         display: block;
         visibility: visible;
-        transition: 0.5s ease;
+        transition: 0.3s ease;
       }
     }
   }
 }
 
-.dropdown-toggle::after {
-  content: '';
-  border: 0;
-}
-
-/* ======  End of Nav Top  ====== */
+/* ======  End of Header  ====== */
 
 /*================================
-          Begin of Main            
+          Begin of Main
 ================================*/
 
-.header {
-  height: 100px;
-  border-bottom: 2px solid $secondary-grey;
-  .input-group {
-    display: inline-flex;
-    margin-left: 5%;
-    .form-control {
-      border: 2px solid $main-orange;
-      box-shadow: none;
-      &:focus {
-        outline: 2px solid $secondary-grey;
-      }
-    }
-    button {
-      background-color: $main-orange;
-      border: 2px solid $secondary-grey;
-      box-shadow: none;
-      &:focus {
-        outline: 2px solid $main-white;
-      }
-      i {
-        color: $main-white;
-      }
-    }
-  }
-  .row {
-    line-height: 100px;
-  }
-  img {
-    max-height: 70px;
-  }
-  .dropdown {
-    float: right;
-  }
-}
+@import 'pages/index';
+@import 'pages/static';
 
-.slider {
-  img {
-    height: 700px;
-  }
-  padding: 0px 0px;
-}
-
-.slogan {
-  text-align: center;
-  padding: 2% 0%;
-  h1 {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 26px;
-    color: $secondary-grey;
-  }
-}
-
-/* ======  Info Section  ====== */
-
-.info {
-  .col-4:nth-child(1) {
-    border-right: 1px solid $main-grey;
-  }
-  .col-4:nth-child(2) {
-    border-right: 1px solid $main-grey;
-  }
-  .info-table {
-    .info-title {
-      h1 {
-        display: inline-block;
-        font-size: 26px;
-        font-weight: bold;
-        line-height: 37px;
-        color: $secondary-grey;
-        border-bottom: 1px solid $secondary-grey;
-      }
-    }
-    .info-list {
-      list-style: none;
-      padding: 0;
-      li {
-        color: $secondary-grey;
-        cursor: pointer;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-/* ======  Popular Section  ====== */
-
-.popular {
-  .popular-item {
-    position: relative;
-    margin: 0px 5px;
-    .text {
-      color: $main-white;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: 15px;
-      font-size: 24px;
-      line-height: 24px;
-      text-transform: uppercase;
-      z-index: 1;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.3;
-      background-color: rgb(0, 0, 0);
-      transition: 0.5s ease;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.1;
-        background: rgb(35, 31, 32);
-      }
-    }
-  }
-}
-
-/* ======  Recommendations Section  ====== */
-
-.recommendations {
-  .owl-nav {
-    top: 10%;
-  }
-  .card {
-    margin: 0px 5px;
-    img {
-      max-width: 173px;
-      min-height: 130px;
-    }
-    a {
-      font-weight: bold;
-      line-height: 16px;
-    }
-    p {
-      margin-top: 5px;
-      color: #333;
-      font-size: 12px;
-      font-weight: bold;
-      line-height: 18px;
-
-      span {
-        font-size: 10px;
-        color: $main-grey;
-      }
-    }
-    .price {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-      line-height: 16px;
-    }
-  }
-}
-
-.certification {
-  margin: 15px 0px;
-  .media {
-    align-items: center;
-    img {
-      height: 150px;
-    }
-    .media-body {
-      h5 {
-        font-size: 22px;
-        line-height: 30px;
-        font-weight: bold;
-        display: inline-block;
-      }
-      p {
-        font-size: 18px;
-        line-height: 30px;
-        font-weight: 300;
-        display: inline-block;
-      }
-    }
-  }
-}
-
-/* ======  Sell Section  ====== */
-
-.sell {
-  background: url(../img/texture.png) transparent repeat;
-  .sell-item {
-    .desc {
-      font-size: 17px;
-      font-weight: bold;
-    }
-
-    img {
-      max-height: 71px;
-    }
-  }
-  .btn {
-    background-color: $secondary-orange;
-    border-color: $main-orange;
-    margin: 3% 0%;
-  }
-}
-
-/* ======  Marketplaces Section  ====== */
-
-.marketplaces {
-  .row-partners {
-    padding: 5% 0%;
-  }
-}
-
-/* ======  End of Nav Main  ====== */
+/* ======  End of Main  ====== */
 
 /*================================
-          Begin of Footer            
+          Begin of Footer
 ================================*/
 
 footer {
   background-color: $secondary-grey;
   color: $main-white;
   .footer-row {
-    padding: 30px;
-
+    padding: 20px 0px;
     .footer-menu-item {
       .footer-title {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 14px;
+        font-size: $link-14;
         margin-bottom: 15px;
       }
       ul {
@@ -470,38 +96,25 @@ footer {
         list-style: none;
         li {
           a {
-            font-size: 14px;
+            font-size: $link-14;
             color: $secondary-white;
             text-decoration: none;
             &:hover {
-              color: $main-white;
-              transition: 0.5s ease;
+              color: $main-orange;
+              transition: 0.3s ease;
             }
           }
           .social-icons {
             font-size: 30px;
-            .fa {
-              transition: 0.5s ease;
-            }
-            .fa-facebook-official:hover {
-              color: #3b5998;
-            }
-            .fa-linkedin-square:hover {
-              color: #007bb5;
-            }
-            .fa-twitter-square:hover {
-              color: #00aced;
-            }
           }
           .dropdown {
             .footer-dropdown {
               cursor: pointer;
             }
-
             .dropdown-menu {
               a {
-                font-size: 12px;
-                color: #333;
+                font-size: $link-14;
+                color: $main-black;
               }
               &::before {
                 display: inline-block;
@@ -526,9 +139,8 @@ footer {
         }
       }
     }
-
     .about {
-      font-size: 12px;
+      font-size: $p-12;
       line-height: 20px;
       vertical-align: super;
       color: $main-white;
@@ -539,7 +151,7 @@ footer {
       .apps-slogan {
         float: left;
         margin-right: 15px;
-        font-size: 14px;
+        font-size: $link-14;
         line-height: 40px;
       }
     }

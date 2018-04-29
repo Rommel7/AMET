@@ -27,14 +27,21 @@ gulp.task("browser-sync", () => {
 gulp.task("styles", () => {
   return (
     gulp
-      .src("app/sass/**/*.scss")
-      .pipe(sass({ outputStyle: "expand" }).on("error", notify.onError()))
-      .pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
-      .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
-      .pipe(autoprefixer(["last 10 versions"]))
-      .pipe(rename({ suffix: ".min", prefix: "" }))
-      .pipe(gulp.dest("app/css"))
-      .pipe(browsersync.reload({ stream: true }))
+    .src("app/sass/**/*.scss")
+    .pipe(sass({
+      outputStyle: "expand"
+    }).on("error", notify.onError()))
+    //.pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
+    //.pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
+    .pipe(autoprefixer(["last 10 versions"]))
+    .pipe(rename({
+      suffix: ".min",
+      prefix: ""
+    }))
+    .pipe(gulp.dest("app/css"))
+    .pipe(browsersync.reload({
+      stream: true
+    }))
   );
 });
 
@@ -50,15 +57,19 @@ gulp.task("images", () => {
 gulp.task("scripts", () => {
   return (
     gulp
-      .src([
-        "app/libs/jquery/dist/jquery.min.js",
-        "app/js/jquery.rd-navbar.min.js", 
-        "app/js/core.js" // Always at the end
-      ])
-      .pipe(concat("scripts.min.js"))
-      // .pipe(uglify()) // (Opt.)
-      .pipe(gulp.dest("app/js"))
-      .pipe(browsersync.reload({ stream: true }))
+    .src([
+      "app/libs/jquery/dist/jquery.min.js",
+      "app/libs/bootstrap/popper.min.js",
+      "app/libs/bootstrap/bootstrap.min.js",
+      "app/libs/owl-carusel/owl.carousel.min.js",
+      "app/js/core.js" // Always at the end
+    ])
+    .pipe(concat("scripts.min.js"))
+    // .pipe(uglify()) // (Opt.)
+    .pipe(gulp.dest("app/js"))
+    .pipe(browsersync.reload({
+      stream: true
+    }))
   );
 });
 

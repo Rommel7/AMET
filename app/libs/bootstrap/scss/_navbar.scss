@@ -9,7 +9,6 @@
 // Navbar position
 // Navbar themes
 
-
 // Navbar
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
@@ -34,7 +33,6 @@
   }
 }
 
-
 // Navbar brand
 //
 // Used for brand, project, or site names.
@@ -52,7 +50,6 @@
     text-decoration: none;
   }
 }
-
 
 // Navbar nav
 //
@@ -76,7 +73,6 @@
   }
 }
 
-
 // Navbar text
 //
 //
@@ -86,7 +82,6 @@
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
 }
-
 
 // Responsive navbar
 //
@@ -130,7 +125,7 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  content: "";
+  content: '';
   background: no-repeat center center;
   background-size: 100% 100%;
 }
@@ -162,11 +157,6 @@
             position: absolute;
           }
 
-          .dropdown-menu-right {
-            right: 0;
-            left: auto; // Reset the default from `.dropdown-menu`
-          }
-
           .nav-link {
             padding-right: $navbar-nav-link-padding-x;
             padding-left: $navbar-nav-link-padding-x;
@@ -180,7 +170,7 @@
         }
 
         .navbar-collapse {
-          display: flex !important;  // stylelint-disable-line declaration-no-important
+          display: flex !important; // stylelint-disable-line declaration-no-important
 
           // Changes flex-bases to auto because of an IE10 bug
           flex-basis: auto;
@@ -189,18 +179,10 @@
         .navbar-toggler {
           display: none;
         }
-
-        .dropup {
-          .dropdown-menu {
-            top: auto;
-            bottom: 100%;
-          }
-        }
       }
     }
   }
 }
-
 
 // Navbar themes
 //
@@ -233,12 +215,12 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: #fff;
+      color: $navbar-light-active-color;
     }
   }
 
   .navbar-toggler {
-    color: #fff;
+    color: $navbar-light-color;
     border-color: $navbar-light-toggler-border-color;
   }
 
@@ -285,7 +267,7 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: #fff;
+      color: $navbar-dark-active-color;
     }
   }
 

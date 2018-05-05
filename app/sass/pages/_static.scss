@@ -41,7 +41,6 @@
 }
 
 // Page About Us
-
 .about-us {
 }
 
@@ -59,6 +58,7 @@
   }
 }
 
+// Page Manpower
 .manpower {
   .excerpt {
     text-indent: 20px;
@@ -75,5 +75,18 @@
     font-weight: bold;
     border-bottom: 1px solid $main-orange;
     display: inline;
+  }
+}
+
+// Page Contact
+.contact {
+  .static-content {
+    margin-top: 20px;
+    .static-content-item {
+      h1 {
+        float: left;
+        margin-right: 10px;
+      }
+    }
   }
 }

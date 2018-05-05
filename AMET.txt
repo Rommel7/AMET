@@ -6,10 +6,12 @@
 05. Construction E - 50
 --
 06. Vehicles - 20
-07. About - 20
-08. Safety Equipment - 20
-09. Consulting - 20
-10. Manpower - 20
+
+
+07. About - 20 +
+08. Safety Equipment - 20 +
+09. Consulting - 20 +
+10. Manpower - 20 +
 
 
 x - Singup

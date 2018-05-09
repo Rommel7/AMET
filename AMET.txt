@@ -5,22 +5,91 @@
 04. Item page - 50
 05. Construction E - 50
 --
+
 06. Vehicles - 20
-
-
 07. About - 20 +
 08. Safety Equipment - 20 +
 09. Consulting - 20 +
 10. Manpower - 20 +
 
 
-x - Singup
-x - Buying
-x - Selling
-x - Checkout
+1. Index
+2. About
+3. Safety Equipment
+4. Consulting
+5. Manpower
+6. Contact
+--
+1. Equipment Service
+3. Item page
+4. Construction E
+5. Vehicles
+
 
 x - header (font-size)
 Y - singin + Transportation
 Y - Construction E - her icon uchun accardion tipli
 Y - navigation
 Y - Equipment Service (Menu+sevices)
+
+
+header 3 dene shey
+transportation - lang
+logolar - sliderin altinda
+------------------------------------
+Services altında olacaq
+Diesel engine safety solution
+Equipment technical service
+Construction equipment rent
+Vehicles technical Service and rent
+------------------------------------
+About us \ why amet \ Our Values \ Services \ Training \ Certificates \ Contacts                      Sign in | Language
+
+
+Technical Service  and  Rental of  heavy equipment ,trucks, vehice generator, air compressor and more, Safety Solution  of diesel engine for  Hazard Zones
+
+
+http://www.goltens.com/diesel-engines
+
+
+• Caterpillar
+• Cummins
+• Detroit Diesel
+• Deutz
+• Isuzu
+• John Deere
+• Kubota
+• Mercedes-Benz
+• Perkins
+• Sisu
+• Case
+• Caterpillar
+• Claas
+• Faresin
+• JCB
+• JLG
+• John Deere
+• Kamaz
+• Bell
+• Bobcat
+• Doosan
+• Fiat
+• Hamm
+• Hitachi (Fiat-Hitachi)
+• Hyundai Construction Equipment
+• JCB
+• Komatsu
+• Kramer
+• Kubota
+• Liebherr
+• Link Belt
+• JLG
+• Hyster
+• HAulett
+• Manitou
+• SKYJACK
+
+• Merlo
+• New Holland
+• Terex
+• TigerCat

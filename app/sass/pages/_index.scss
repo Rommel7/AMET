@@ -97,7 +97,6 @@
       font-size: $p-12;
       font-weight: bold;
       line-height: 18px;
-
       span {
         font-size: 10px;
         color: $main-grey;
@@ -135,27 +134,6 @@
         display: inline-block;
       }
     }
-  }
-}
-
-/* ======  Sell Section  ====== */
-
-.sell {
-  background: url(../img/texture.png) transparent repeat;
-  .sell-item {
-    .desc {
-      font-size: $h3-18;
-      font-weight: bold;
-    }
-
-    img {
-      max-height: 71px;
-    }
-  }
-  .btn {
-    background-color: $secondary-orange;
-    border-color: $main-orange;
-    margin: 3% 0%;
   }
 }
 

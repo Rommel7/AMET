@@ -16,13 +16,17 @@
   }
   .info-table {
     .info-title {
+      text-align: center;
       h1 {
-        display: inline-block;
         font-size: $h2-20;
         font-weight: bold;
         line-height: 37px;
-        color: $secondary-grey;
+        color: $secondary-orange;
         border-bottom: 1px solid $secondary-grey;
+        span {
+          font-size: $h3-18;
+          color: $secondary-grey;
+        }
       }
     }
     .info-list {

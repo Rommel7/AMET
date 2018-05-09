@@ -60,7 +60,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-overflow-style: scrollbar; }
@@ -7669,7 +7669,7 @@ textarea {
 
 .slogan {
   text-align: center;
-  padding: 2% 0%; }
+  padding: 5% 0%; }
   .slogan h1 {
     font-weight: bold;
     font-size: 24px;
@@ -7733,8 +7733,7 @@ textarea {
 
 .dropdown {
   position: relative;
-  display: inline-block;
-  padding-bottom: 10px; }
+  display: inline-block; }
 
 .dropdown-menu {
   top: 75%; }
@@ -7928,6 +7927,8 @@ textarea {
     color: #eee;
     height: 80px;
     font-size: 16px; }
+    .header nav .navbar-partners {
+      margin-right: 30px; }
     .header nav .navbar-nav .nav-link {
       color: #eee;
       -webkit-transition: 0.3s ease;
@@ -7942,7 +7943,8 @@ textarea {
       padding: 1em; }
     .header nav .navbar-nav .dropdown-menu {
       display: block;
-      visibility: hidden; }
+      visibility: hidden;
+      margin-top: 10px; }
       .header nav .navbar-nav .dropdown-menu .dropdown-item {
         font-size: 12px; }
       .header nav .navbar-nav .dropdown-menu::before {
@@ -7958,6 +7960,15 @@ textarea {
         border-bottom: 0.5em solid;
         border-left: 0.5em solid transparent;
         color: #fff; }
+    .header nav .navbar-nav .nav-item .custom-select {
+      color: #fff;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer; }
+      .header nav .navbar-nav .nav-item .custom-select:focus {
+        -webkit-box-shadow: unset;
+                box-shadow: unset; }
     .header nav .navbar-nav .nav-item:hover .dropdown-menu {
       display: block;
       visibility: visible;
@@ -7981,13 +7992,17 @@ textarea {
 .info .col-4:nth-child(2) {
   border-right: 1px solid #9c9d9d; }
 
-.info .info-table .info-title h1 {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 37px;
-  color: #6f6f6e;
-  border-bottom: 1px solid #6f6f6e; }
+.info .info-table .info-title {
+  text-align: center; }
+  .info .info-table .info-title h1 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 37px;
+    color: #ef7c00;
+    border-bottom: 1px solid #6f6f6e; }
+    .info .info-table .info-title h1 span {
+      font-size: 18px;
+      color: #6f6f6e; }
 
 .info .info-table .info-list {
   list-style: none;

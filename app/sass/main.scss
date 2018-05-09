@@ -59,16 +59,7 @@
         }
       }
       .nav-item {
-        .custom-select {
-          color: #fff;
-          background: transparent;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          &:focus {
-            box-shadow: unset;
-          }
-        }
+
         &:hover .dropdown-menu {
           display: block;
           visibility: visible;

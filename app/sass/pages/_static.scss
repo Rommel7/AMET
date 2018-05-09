@@ -29,20 +29,24 @@
     h1 {
       font-size: $h3-18;
       font-weight: 700;
-
       &::before {
         content: '◽ ';
       }
     }
-    p {
-      font-size: $link-14;
+    a {
+      color: $main-black;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s ease;
+      &:hover {
+        color: $main-orange;
+      }
     }
   }
 }
 
 // Page About Us
-.about-us {
-}
+.about-us {}
 
 // Page Safety Equipment
 .safety-equipment {
@@ -87,6 +91,43 @@
         float: left;
         margin-right: 10px;
       }
+    }
+  }
+}
+
+// Page Services
+.services {
+  .row {
+    padding: 30px 0;
+  }
+  .content-text {
+    h1 {
+      font-weight: bold;
+      font-size: $h1-24;
+      color: $main-grey;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: $h3-18;
+      color: $main-orange;
+    }
+    p {
+      font-size: $link-14;
+      color: $main-black;
+    }
+  }
+  .card {
+    .card-title {
+      color: $main-orange;
+      font-weight: bold;
+    }
+    .card-link {
+      display: block;
+      text-align: center;
+      font-size: $link-14;
+    }
+    img {
+      height: 200px;
     }
   }
 }

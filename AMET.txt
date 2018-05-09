@@ -35,6 +35,7 @@ Y - Equipment Service (Menu+sevices)
 
 header 3 dene shey
 transportation - lang
+
 logolar - sliderin altinda
 ------------------------------------
 Services altında olacaq
@@ -43,14 +44,12 @@ Equipment technical service
 Construction equipment rent
 Vehicles technical Service and rent
 ------------------------------------
-About us \ why amet \ Our Values \ Services \ Training \ Certificates \ Contacts                      Sign in | Language
 
 
+About us \ why amet \ Our Values \ Services \ Training \ Certificates \ Contacts   Sign in | Language
 Technical Service  and  Rental of  heavy equipment ,trucks, vehice generator, air compressor and more, Safety Solution  of diesel engine for  Hazard Zones
 
-
 http://www.goltens.com/diesel-engines
-
 
 • Caterpillar
 • Cummins
@@ -63,32 +62,24 @@ http://www.goltens.com/diesel-engines
 • Perkins
 • Sisu
 • Case
-• Caterpillar
 • Claas
 • Faresin
 • JCB
 • JLG
-• John Deere
 • Kamaz
-• Bell
 • Bobcat
 • Doosan
 • Fiat
-• Hamm
 • Hitachi (Fiat-Hitachi)
 • Hyundai Construction Equipment
-• JCB
 • Komatsu
 • Kramer
-• Kubota
 • Liebherr
 • Link Belt
-• JLG
 • Hyster
 • HAulett
 • Manitou
 • SKYJACK
-
 • Merlo
 • New Holland
 • Terex

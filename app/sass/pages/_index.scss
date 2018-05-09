@@ -148,3 +148,20 @@
     padding: 5% 0%;
   }
 }
+
+/* ======  Brands Section  ====== */
+
+.brands {
+  .row-brands {
+    padding: 5% 0%;
+  }
+  .owl-nav {
+    display: none !important;
+  }
+  .brand-logo {
+    padding: 20px;
+    img {
+      max-height: 160px;
+    }
+  }
+}

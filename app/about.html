@@ -24,13 +24,22 @@
 </head>
 
 <body>
+    <!-- Page Loader -->
+    <section class="loading-overlay">
+        <div class="loading-inner">
+            <span class="leaf1"></span>
+            <span class="leaf2"></span>
+            <span class="leaf3"></span>
+            <span class="leaf4"></span>
+        </div>
+    </section>
     <!-- Header Begin -->
     <header class="header">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-partners" href="index.html">
                             <img class="img" src="img/logo.png" alt="Logo" height="40px">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -40,7 +49,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="about.html">
+                                    <a class="nav-link " href="about.html">
                                         About Us
                                     </a>
                                     <div class="dropdown-menu">
@@ -50,12 +59,12 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#">
+                                    <a class="nav-link " href="#" id="navbarDropdown">
                                         Why AMET
                                     </a>
                                     <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">How it works</a>
                                         <a class="dropdown-item" href="parners.html">Partners</a>
-                                        <a class="dropdown-item" href="brands.html">Brands</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
@@ -64,7 +73,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="services.html">Services</a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class="nav-link" href="training.html">Training</a>
                                 </li>
@@ -80,7 +88,10 @@
                                     <a class="nav-link" href="#">Sign in &nbsp; |</a>
                                 </li>
                                 <li class="nav-item">
-                                    
+                                    <select class="custom-select">
+                                        <option selected>English</option>
+                                        <option value="1">Azerbaijani</option>
+                                    </select>
                                 </li>
                             </ul>
                         </div>
@@ -226,6 +237,9 @@
                                     <li>
                                         <a href="consulting.html">Consulting</a>
                                     </li>
+                                    <li>
+                                        <a href="our-values.html">Our Values</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -238,13 +252,13 @@
                                         <a href="contact.html">Contact Us</a>
                                     </li>
                                     <li>
-                                        <a href="+994(12)530-99-15">+994 (12) 530-99-15</a>
+                                        <a href="tel:00994125309915">+994 (12) 530-99-15</a>
                                     </li>
                                     <li>
-                                        <a href="+994(50)225-50-36">+994 (50) 225-50-36</a>
+                                        <a href="tel:00994502255036">+994 (50) 225-50-36</a>
                                     </li>
                                     <li>
-                                        <a href="office@ametsolution.com">info@ametsolution.com</a>
+                                        <a href="mailto:office@ametsolution.com" target="_blank">info@ametsolution.com</a>
                                     </li>
                                 </ul>
                             </div>
@@ -253,14 +267,15 @@
                             <div class="footer-menu-item">
                                 <div class="footer-title hidden-xs">Site Map</div>
                                 <ul>
-                                    <li>
-                                        <a href="our-values.html">Our Values</a>
-                                    </li>
+
                                     <li>
                                         <a href="services.html">Services</a>
                                     </li>
                                     <li>
                                         <a href="training.html">Training</a>
+                                    </li>
+                                    <li>
+                                        <a href="certificates.html">Certificates</a>
                                     </li>
                                     <li>
                                         <a href="#">Transportation</a>
@@ -287,16 +302,12 @@
                                             <i class="fa fa-linkedin-square"></i>
                                         </a>
                                     </li>
-                                    <li style="margin-bottom: 15px;">
-                                        <div class="dropdown">
-                                            <a class="" style="letter-spacing: 0.5px;">
-                                                Lang: English
-                                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                                            </a>
-                                            <div class="dropdown-content">
-                                                <a href="#az">Azərbaycan</a>
-                                            </div>
-                                        </div>
+                                    <li style="margin-bottom: 15px; float: right;">
+                                        <select class="custom-select">
+                                            <option selected disabled>Langueage</option>
+                                            <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; English</option>
+                                            <option value="1">Azerbaijani</option>
+                                        </select>
                                     </li>
                                 </ul>
                             </div>
@@ -307,10 +318,10 @@
             <div class="row footer-row">
                 <div class="col-8">
                     <div class="about">
-                        Copyright © 2018
+                        Copyright © 2018.
                         <br> We provide every customer with access to the best people, equipment and solutions in the industry.
                         Deploy the best people, equipment and solutions to enable our customers to safely build a better
-                        and stronger
+                        and stronger.
                     </div>
                 </div>
                 <div class="col-4">

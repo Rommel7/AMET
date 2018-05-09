@@ -60,7 +60,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-overflow-style: scrollbar; }
@@ -7653,7 +7653,7 @@ textarea {
   font-weight: bold;
   font-size: 28px;
   line-height: 35px;
-  margin: 20px 0px;
+  margin: 30px 0px;
   padding: 10px 0px;
   border-bottom: 3px solid #ef7c00; }
   .headline i {
@@ -7669,7 +7669,7 @@ textarea {
 
 .slogan {
   text-align: center;
-  padding: 5% 0%; }
+  padding: 60px 0px 20px 0px; }
   .slogan h1 {
     font-weight: bold;
     font-size: 24px;
@@ -7767,6 +7767,26 @@ textarea {
 
 .dropdown:hover .dropdown-content {
   display: block; }
+
+.custom-select {
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer; }
+  .custom-select:focus {
+    -webkit-box-shadow: unset;
+            box-shadow: unset; }
+  .custom-select option {
+    outline: none;
+    background-color: #6f6f6e; }
+
+.carousel-item img {
+  max-height: 800px; }
+
+.carousel-caption {
+  background-color: rgba(51, 51, 51, 0.3); }
 
 /* ======  End of Global  ====== */
 /* Preloader
@@ -7960,15 +7980,6 @@ textarea {
         border-bottom: 0.5em solid;
         border-left: 0.5em solid transparent;
         color: #fff; }
-    .header nav .navbar-nav .nav-item .custom-select {
-      color: #fff;
-      background: transparent;
-      border: none;
-      outline: none;
-      cursor: pointer; }
-      .header nav .navbar-nav .nav-item .custom-select:focus {
-        -webkit-box-shadow: unset;
-                box-shadow: unset; }
     .header nav .navbar-nav .nav-item:hover .dropdown-menu {
       display: block;
       visibility: visible;
@@ -8096,6 +8107,18 @@ textarea {
 .marketplaces .row-partners {
   padding: 5% 0%; }
 
+/* ======  Brands Section  ====== */
+.brands .row-brands {
+  padding: 5% 0%; }
+
+.brands .owl-nav {
+  display: none !important; }
+
+.brands .brand-logo {
+  padding: 20px; }
+  .brands .brand-logo img {
+    max-height: 160px; }
+
 .main-margin {
   margin: 50px 0px; }
 
@@ -8123,8 +8146,15 @@ textarea {
   .static-content .static-content-item h1::before {
     content: '◽ '; }
 
-.static-content .static-content-item p {
-  font-size: 14px; }
+.static-content .static-content-item a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .static-content .static-content-item a:hover {
+    color: #fbba00; }
 
 .safety-equipment .excerpt {
   text-indent: 20px;
@@ -8155,6 +8185,35 @@ textarea {
   .contact .static-content .static-content-item h1 {
     float: left;
     margin-right: 10px; }
+
+.services .row {
+  padding: 30px 0; }
+
+.services .content-text h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #9c9d9d; }
+
+.services .content-text h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fbba00; }
+
+.services .content-text p {
+  font-size: 14px;
+  color: #333; }
+
+.services .card .card-title {
+  color: #fbba00;
+  font-weight: bold; }
+
+.services .card .card-link {
+  display: block;
+  text-align: center;
+  font-size: 14px; }
+
+.services .card img {
+  height: 200px; }
 
 /* ======  End of Main  ====== */
 /*================================

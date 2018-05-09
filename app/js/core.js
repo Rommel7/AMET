@@ -6,10 +6,10 @@ $(document).ready(function() {
   });
 
   $('.owl-two').owlCarousel({
-    items: 4,
+    items: 5,
     loop: true,
-    nav: true,
-    dots: true
+    nav: false,
+    dots: false
   });
   $('.owl-three').owlCarousel({
     items: 6,

@@ -33,11 +33,13 @@
       list-style: none;
       padding: 0;
       li {
-        color: $secondary-grey;
-        cursor: pointer;
-        font-size: $link-14;
-        &:hover {
-          text-decoration: underline;
+        a {
+          color: $secondary-grey;
+          cursor: pointer;
+          font-size: $link-14;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

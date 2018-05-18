@@ -82,6 +82,49 @@
   }
 }
 
+.why-amet {
+  .excerpt {
+    margin: 20px 0px;
+  }
+}
+
+.our-values {
+  h2 {
+    text-align: center;
+    font-style: initial;
+    font-size: 22px;
+    color: $main-grey;
+    margin: 30px 0px 30px 0px;
+  }
+  .static-img {
+    img {
+      width: 100%;
+    }
+  }
+  .value-h {
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .value-p {
+    font-size: 14px;
+  }
+}
+
+.certificates {
+  .certificate {
+    padding: 20px;
+    border: 2px solid $main-orange;
+    span {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 // Page Contact
 .contact {
   .static-content {

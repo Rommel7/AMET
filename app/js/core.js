@@ -1,6 +1,9 @@
-$(document).ready(function() {
-  $(window).on('load', function() {
-    setTimeout(function() {
+$(document).ready(function () {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+  $(window).on('load', function () {
+    setTimeout(function () {
       $('.loading-overlay').hide();
     }, 1500);
   });

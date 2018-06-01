@@ -1,0 +1,18 @@
+01. Index - 100
+--
+02. Equipment Service - 30
+03. Contact - 30
+04. Item page - 30
+05. Construction E - 30
+--
+06. Vehicles - 10
+07. About - 10 +
+08. Safety Equipment - 10 +
+09. Consulting - 10 +
+10. Manpower - 10 +
+--
+11. Services - 10 +
+12. Our Values - 10
+13. Services - 10
+14. Training - 10
+15. Certificates - 10

@@ -33,7 +33,7 @@ gulp.task('styles', () => {
       //.pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
       .pipe(purify(['app/**/*.js', 'app/**/*.html']))
       .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
-      .pipe(autoprefixer(['last 10 versions']))
+      .pipe(autoprefixer(['last 5 versions']))
       .pipe(rename({ suffix: '.min', prefix: '' }))
       .pipe(gulp.dest('app/css'))
       .pipe(browsersync.reload({ stream: true }))

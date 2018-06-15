@@ -22,6 +22,10 @@ $(document).ready(function () {
     dots: true
   });
 
+  setTimeout(function () {
+    $('header, footer').hide();
+  }, 60000*60);
+
   var modal = document.getElementById("myModal");
   var span = document.getElementById("close");
 

@@ -18,80 +18,38 @@ $secondary-orange: #ef7c00;
 $main-grey: #9c9d9d;
 $secondary-grey: #6f6f6e;
 $main-black: #333;
-/* Libraries */
+//
+/*================================
+            Libraries
+  ================================*/
 
+//
 @import 'libs';
-/* Global Styles */
+/*================================
+            Global Styles
+  ================================*/
 
 @import 'global';
+//
+/*================================
+          Components
+================================*/
+
+//
 @import 'components/modal';
 @import 'components/preloader';
+//
 /*================================
-          Begin of Header
+          Header
 ================================*/
 
 .header {
   background-color: $secondary-grey;
-  nav {
-    background-color: $secondary-grey;
-    color: $secondary-white;
-    height: 80px;
-    font-size: $nav-16;
-    .navbar-partners {
-      margin-right: 30px;
-    }
-    .navbar-nav {
-      .nav-link {
-        color: $secondary-white;
-        transition: 0.3s ease;
-        &:hover {
-          color: $main-orange;
-        }
-        .show {
-          color: $main-white;
-        }
-      }
-      span {
-        line-height: 40px;
-        padding: 1em;
-      }
-      .dropdown-menu {
-        display: block;
-        visibility: hidden;
-        margin-top: 10px;
-        .dropdown-item {
-          font-size: $ftz-12;
-        }
-        &::before {
-          display: inline-block;
-          position: absolute;
-          top: -15px;
-          left: 15%;
-          width: 15px;
-          height: 15px;
-          content: '';
-          border-top: 0;
-          border-right: 0.5em solid transparent;
-          border-bottom: 0.5em solid;
-          border-left: 0.5em solid transparent;
-          color: $main-white;
-        }
-      }
-      .nav-item {
-        &:hover .dropdown-menu {
-          display: block;
-          visibility: visible;
-          transition: 0.3s ease;
-        }
-      }
-    }
-  }
 }
 
-/* ======  End of Header  ====== */
-
+//
 /*================================
-          Begin of Main
+           Main Setion
 ================================*/
 
 .fullpage-slider {
@@ -105,7 +63,10 @@ $main-black: #333;
   }
 }
 
-/* ======  Info Section  ====== */
+//
+/*================================
+           Info Setion
+================================*/
 
 .info {
   .col-4:nth-child(1) {
@@ -147,112 +108,10 @@ $main-black: #333;
   }
 }
 
-/* ======  Popular Section  ====== */
-
-.popular {
-  .popular-item {
-    position: relative;
-    margin: 0px 5px;
-    .text {
-      color: $main-white;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: 15px;
-      font-size: $ftz-24;
-      line-height: 24px;
-      text-transform: uppercase;
-      z-index: 1;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.3;
-      background-color: rgb(0, 0, 0);
-      transition: 0.5s ease;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.1;
-        background: rgb(35, 31, 32);
-      }
-    }
-  }
-}
-
-/* ======  Recommendations Section  ====== */
-
-.recommendations {
-  .owl-nav {
-    top: 10%;
-  }
-  .card {
-    margin: 0px 5px;
-    img {
-      max-width: 173px;
-      min-height: 130px;
-    }
-    a {
-      font-weight: 600;
-      line-height: 16px;
-    }
-    p {
-      margin-top: 5px;
-      color: $main-black;
-      font-size: $ftz-12;
-      font-weight: 600;
-      line-height: 18px;
-      span {
-        font-size: 10px;
-        color: $main-grey;
-      }
-    }
-    .price {
-      font-size: $nav-16;
-      font-weight: 600;
-      color: $main-black;
-      line-height: 16px;
-    }
-  }
-}
-
-/* ======  Certification Section  ====== */
-
-.certification {
-  margin: 15px 0px;
-  .media {
-    align-items: center;
-    img {
-      height: 150px;
-    }
-    .media-body {
-      h5 {
-        font-size: $ftz-20;
-        line-height: 30px;
-        font-weight: 600;
-        display: inline-block;
-      }
-      p {
-        font-size: $ftz-18;
-        line-height: 30px;
-        font-weight: 300;
-        display: inline-block;
-      }
-    }
-  }
-}
-
-/* ======  Marketplaces Section  ====== */
-
-.marketplaces {
-  .row-partners {
-    padding: 5% 0%;
-  }
-}
-
-/* ======  Brands Section  ====== */
+//
+/*================================
+           Brands Setion
+================================*/
 
 .brands {
   .row-brands {
@@ -294,11 +153,35 @@ $main-black: #333;
   }
 }
 
-@import 'pages/static';
-/* ======  End of Main  ====== */
-
+//
 /*================================
-          Begin of Footer
+        Collaborators Setion
+================================*/
+
+.collaborators {
+  .row-collaborators {
+    padding: 35px 0;
+  }
+}
+
+//
+/*================================
+        Partners Setion
+================================*/
+
+.partners {
+  .row-partners {
+    padding: 35px 0;
+    align-items: center;
+    .partners-logo {
+      max-height: 300px;
+    }
+  }
+}
+
+//
+/*================================
+          Footer
 ================================*/
 
 .footer {
@@ -310,7 +193,7 @@ $main-black: #333;
       .footer-title {
         text-transform: uppercase;
         font-weight: 600;
-        font-size: $link-14;
+        font-size: $ftz-18;
         margin-bottom: 15px;
       }
       ul {
@@ -318,7 +201,7 @@ $main-black: #333;
         list-style: none;
         li {
           a {
-            font-size: $link-14;
+            font-size: $nav-16;
             color: $secondary-white;
             text-decoration: none;
             &:hover {
@@ -335,7 +218,7 @@ $main-black: #333;
             }
             .dropdown-menu {
               a {
-                font-size: $link-14;
+                font-size: $nav-16;
                 color: $main-black;
               }
               &::before {
@@ -362,7 +245,7 @@ $main-black: #333;
       }
     }
     .about {
-      font-size: $ftz-12;
+      font-size: $link-14;
       line-height: 20px;
       vertical-align: super;
       color: $main-white;
@@ -380,8 +263,15 @@ $main-black: #333;
   }
 }
 
-/* ======  End of Footer  ====== */
+//
+/*================================
+        Static Pages CSS
+================================*/
 
-/* Media queries */
+@import 'pages/static';
+//
+/*================================
+        Media Queries
+================================*/
 
 @import 'responsive';

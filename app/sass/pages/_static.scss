@@ -1,139 +1,151 @@
-.main-margin {
-  margin: 50px 0px;
-}
-
-.static-img {
-  border: 2px solid $main-orange;
-  margin: 20px 0px;
-}
-
-.title {
-  font-size: $h1-24;
-  font-weight: bold;
-  color: $secondary-grey;
-  h1 {
-    display: inline-block;
-    padding-bottom: 5px;
-    border-bottom: 2px solid $main-orange;
-  }
-}
-
-.content-text {
-  font-size: $link-14;
-  color: $main-black;
-  margin: 10px 0px;
-}
-
-.static-content {
-  .static-content-item {
+// SCSS Varibles
+//
+// Fonts
+$main-font: 'Open Sans',
+sans-serif;
+$ftz-24: 24px;
+$ftz-20: 20px;
+$ftz-18: 18px;
+$nav-16: 16px;
+$link-14: 14px;
+$ftz-12: 12px;
+//
+// Colors
+$main-white: #fff;
+$secondary-white: #eee;
+$main-orange: #fbba00;
+$secondary-orange: #ef7c00;
+$main-grey: #9c9d9d;
+$secondary-grey: #6f6f6e;
+$main-black: #333;
+//
+//Styles
+.static-info-pages {
+  margin: 50px 0px; //Title
+  .static-title {
+    font-size: $ftz-24;
+    font-weight: bold;
+    color: $secondary-grey;
     h1 {
-      font-size: $h3-18;
-      font-weight: 700;
+      display: inline-block;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $main-orange;
+    }
+  } //
+  //Image
+  .static-img {
+    border: 2px solid $main-orange;
+    margin: 30px 0px;
+  } //
+  //Text
+  .static-content {
+    margin: 30px 0px;
+    h3 {
+      font-size: $ftz-18;
+      font-weight: 600;
       &::before {
         content: '◽ ';
       }
     }
-    a {
-      color: $main-black;
-      text-decoration: none;
-      font-size: 16px;
-      transition: 0.3s ease;
-      &:hover {
-        color: $main-orange;
+    .excerpt {
+      text-indent: 20px;
+      margin: 20px 0px;
+      span {
+        font-weight: bold;
       }
     }
-  }
-}
-
-// Page About Us
-.about-us {}
-
-// Page Safety Equipment
-.safety-equipment {
-  .excerpt {
-    text-indent: 20px;
-    margin: 20px 0px;
-    span {
-      font-weight: bold;
+    .excerpt-contact {
+      margin: 20px 0px;
+      a {
+        color: $main-orange;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s ease;
+        &:hover {
+          color: $main-black;
+        }
+      }
     }
-  }
-  .excerpt-contact {
-    margin: 20px 0px;
-  }
-}
-
-// Page Manpower
-.manpower {
-  .excerpt {
-    text-indent: 20px;
-    margin: 20px 0px;
-    span {
-      font-weight: bold;
+  } //
+  // Page About Us
+  .about-us {}
+  // Page Safety Equipment
+  .safety-equipment {}
+  // Page Manpower
+  .manpower {}
+  // Consulting
+  .consulting {}
+  // Why AMET
+  .why-amet {}
+  // Our Values
+  .our-values {
+    .static-img {
+      border: none;
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: $ftz-24;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: 600;
+      }
     }
-  }
-  .static-content {
-    margin-top: 15px;
-  }
-  h3 {
-    font-size: $h3-18;
-    font-weight: bold;
-    border-bottom: 1px solid $main-orange;
-    display: inline;
-  }
-}
-
-.why-amet {
-  .excerpt {
-    margin: 20px 0px;
-  }
-}
-
-.our-values {
-  h2 {
-    text-align: center;
-    font-style: initial;
-    font-size: 22px;
-    color: $main-grey;
-    margin: 30px 0px 30px 0px;
-  }
-  .static-img {
-    border: none;
-    img {
-      width: 100%;
-    }
-  }
-  .value-h {
-    text-align: center;
-    margin: 20px 0px;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .value-p {
-    font-size: 14px;
-  }
-}
-
-.certificates {
-  .certificate {
-    padding: 20px;
-    border: 2px solid $main-orange;
-    span {
-      display: block;
+    .value-h {
       text-align: center;
-      font-weight: 700;
-      margin-bottom: 10px;
+      margin: 20px 0px;
+      font-size: 20px;
+      font-weight: 600;
     }
-  }
-}
-
-// Page Contact
-.contact {
-  .static-content {
-    margin-top: 20px;
-    .static-content-item {
-      h1 {
-        float: left;
-        margin-right: 10px;
+  } //
+  // Certificates
+  .certificates {
+    .certificate {
+      padding: 20px;
+      border: 2px solid $main-orange;
+      span {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $secondary-orange;
+      }
+    }
+  } //
+  // Page Contact
+  .contact {
+    .row {
+      .col-6:first-child {
+        position: relative;
+      }
+    }
+    .static-content {
+      margin: unset;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      h3 {
+        margin: 20px 0;
+        font-size: $ftz-20;
+        font-weight: 600;
+      }
+      p {
+        display: inline-block;
+        cursor: pointer;
+      }
+      p,
+      a {
+        padding: 0;
+        margin: 0;
+        color: $secondary-orange;
+        font-size: $ftz-20;
+        font-weight: 500;
+        line-height: 21px;
+        transition: 0.3s ease;
+        &:hover {
+          text-decoration: none;
+          color: $main-black;
+        }
       }
     }
   }
@@ -143,22 +155,6 @@
 .services {
   .row {
     padding: 30px 0;
-  }
-  .content-text {
-    h1 {
-      font-weight: bold;
-      font-size: $h1-24;
-      color: $main-grey;
-    }
-    h3 {
-      font-weight: bold;
-      font-size: $h3-18;
-      color: $main-orange;
-    }
-    p {
-      font-size: $link-14;
-      color: $main-black;
-    }
   }
   .card {
     margin-bottom: 30px;
@@ -192,5 +188,24 @@
     img {
       height: 200px;
     }
+  }
+}
+
+.safety-solution {
+  display: flex;
+  margin-top: 50px;
+  .text {
+    margin-left: 50px;
+  }
+}
+
+.item-table {
+  margin-top: 50px;
+  border-top: 1px solid $main-orange;
+  table {
+    margin: 0 auto;
+  }
+  .dl-product-name {
+    margin: 30px 0;
   }
 }

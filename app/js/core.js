@@ -1,51 +1,19 @@
-// var modal = document.getElementById("myModal");
-// var span = document.getElementById("close");
-
-// var images = document.getElementsByClassName("myImg");
-// var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-// var i;
-// for (i = 0; i < images.length; i++) {
-//   images[i].onclick = function () {
-//     modal.style.display = "block";
-//     modalImg.src = this.src;
-//     modalImg.alt = this.alt;
-//   };
-// }
-// span.onclick = function () {
-//   modal.style.display = "none";
-// };
-
-// document.onkeyup(function(e) {
-//   if(e.keyCode == 27) {
-//     modal.
-//   }
-// })
-
-  // $(document).keyup(function (e) {
-  //   if (e.keyCode == 27) {
-  //     modal.style.display = "none";
-  //   }
-  // });
-
-
 $(window).on('load', function () {
   setTimeout(function () {
     $('.loading-overlay').hide();
-  }, 500);
+  }, 1000);
 });
 
 
 $(document).ready(function () {
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  });
-
   $('.owl-two').owlCarousel({
     items: 5,
     loop: true,
     nav: false,
-    dots: false
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true
   });
   $('.owl-three').owlCarousel({
     items: 6,
@@ -54,6 +22,33 @@ $(document).ready(function () {
     dots: true
   });
 
+  var modal = document.getElementById("myModal");
+  var span = document.getElementById("close");
 
+  var images = document.getElementsByClassName("myImg");
+  var modalImg = document.getElementById("img01");
 
+  var i;
+  for (i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    };
+  }
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  $(document).keyup(function (e) {
+    if (e.keyCode == 27) {
+      modal.style.display = "none";
+    }
+  });
+
+  $(document).click(function (event) {
+    if ($(event.target).closest("#myModal").length) {
+      $("body").find("#myModal").hide();
+    }
+  });
 });

@@ -4,16 +4,10 @@
   "name": "",
   "description": "",
   "short_name": "",
-  "icons": [
-    {
+  "icons": [{
       "src": "img/favicon/favicon.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
-    },
-    {
-      "src": "img/favicon/apple-touch-icon-210x210.png",
-      "sizes": "210x210",
-      "type": "image/png"
     }
   ],
   "scope": "/app",

@@ -1,12 +1,31 @@
+// SCSS Varibles
+//
+// Fonts
+$main-font: 'Open Sans',
+sans-serif;
+$ftz-24: 24px;
+$ftz-20: 20px;
+$ftz-18: 18px;
+$nav-16: 16px;
+$link-14: 14px;
+$ftz-12: 12px;
+//
+// Colors
+$main-white: #fff;
+$secondary-white: #eee;
+$main-orange: #fbba00;
+$secondary-orange: #ef7c00;
+$main-grey: #9c9d9d;
+$secondary-grey: #6f6f6e;
+$main-black: #333;
 /* Libraries */
 
 @import 'libs';
-/* Fonts */
-
-@import 'fonts';
 /* Global Styles */
 
 @import 'global';
+@import 'components/modal';
+@import 'components/preloader';
 /*================================
           Begin of Header
 ================================*/
@@ -41,7 +60,7 @@
         visibility: hidden;
         margin-top: 10px;
         .dropdown-item {
-          font-size: $p-12;
+          font-size: $ftz-12;
         }
         &::before {
           display: inline-block;
@@ -75,7 +94,206 @@
           Begin of Main
 ================================*/
 
-@import 'pages/index';
+.fullpage-slider {
+  .carousel-item {
+    img {
+      height: 800px;
+    }
+    .carousel-caption {
+      background-color: rgba(51, 51, 51, 0.3);
+    }
+  }
+}
+
+/* ======  Info Section  ====== */
+
+.info {
+  .col-4:nth-child(1) {
+    border-right: 1px solid $main-grey;
+  }
+  .col-4:nth-child(2) {
+    border-right: 1px solid $main-grey;
+  }
+  .info-table {
+    .info-title {
+      text-align: center;
+      h1 {
+        font-size: $ftz-20;
+        font-weight: 600;
+        line-height: 37px;
+        color: $secondary-orange;
+        border-bottom: 1px solid $secondary-grey;
+        span,
+        a {
+          font-size: $ftz-18;
+          color: $secondary-grey;
+        }
+      }
+    }
+    .info-list {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          color: $secondary-grey;
+          cursor: pointer;
+          font-size: $link-14;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ======  Popular Section  ====== */
+
+.popular {
+  .popular-item {
+    position: relative;
+    margin: 0px 5px;
+    .text {
+      color: $main-white;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      font-size: $ftz-24;
+      line-height: 24px;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background-color: rgb(0, 0, 0);
+      transition: 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.1;
+        background: rgb(35, 31, 32);
+      }
+    }
+  }
+}
+
+/* ======  Recommendations Section  ====== */
+
+.recommendations {
+  .owl-nav {
+    top: 10%;
+  }
+  .card {
+    margin: 0px 5px;
+    img {
+      max-width: 173px;
+      min-height: 130px;
+    }
+    a {
+      font-weight: 600;
+      line-height: 16px;
+    }
+    p {
+      margin-top: 5px;
+      color: $main-black;
+      font-size: $ftz-12;
+      font-weight: 600;
+      line-height: 18px;
+      span {
+        font-size: 10px;
+        color: $main-grey;
+      }
+    }
+    .price {
+      font-size: $nav-16;
+      font-weight: 600;
+      color: $main-black;
+      line-height: 16px;
+    }
+  }
+}
+
+/* ======  Certification Section  ====== */
+
+.certification {
+  margin: 15px 0px;
+  .media {
+    align-items: center;
+    img {
+      height: 150px;
+    }
+    .media-body {
+      h5 {
+        font-size: $ftz-20;
+        line-height: 30px;
+        font-weight: 600;
+        display: inline-block;
+      }
+      p {
+        font-size: $ftz-18;
+        line-height: 30px;
+        font-weight: 300;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* ======  Marketplaces Section  ====== */
+
+.marketplaces {
+  .row-partners {
+    padding: 5% 0%;
+  }
+}
+
+/* ======  Brands Section  ====== */
+
+.brands {
+  .row-brands {
+    padding: 35px 0;
+    margin: 0;
+    .owl-nav {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .owl-prev,
+      .owl-next {
+        width: 40px;
+        height: 40px;
+        line-height: 30px;
+        border: 1px solid $secondary-orange;
+        margin: 0 5px;
+        border-radius: 4px;
+        outline: none;
+        transition: 0.3s ease;
+        &:hover {
+          border: 1px solid $main-black;
+          span {
+            color: $main-black;
+          }
+        }
+        span {
+          transition: 0.3s ease;
+          font-size: 30px;
+          color: $secondary-orange;
+        }
+      }
+    }
+  }
+  .brand-logo {
+    padding: 20px;
+    img {
+      max-height: 160px;
+    }
+  }
+}
+
 @import 'pages/static';
 /* ======  End of Main  ====== */
 
@@ -91,7 +309,7 @@
     .footer-menu-item {
       .footer-title {
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 600;
         font-size: $link-14;
         margin-bottom: 15px;
       }
@@ -144,7 +362,7 @@
       }
     }
     .about {
-      font-size: $p-12;
+      font-size: $ftz-12;
       line-height: 20px;
       vertical-align: super;
       color: $main-white;

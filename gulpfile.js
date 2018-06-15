@@ -30,10 +30,10 @@ gulp.task('styles', () => {
     gulp
       .src('app/sass/**/*.scss')
       .pipe(sass({ outputStyle: 'expand' }).on('error', notify.onError()))
-      //.pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
-      .pipe(purify(['app/**/*.js', 'app/**/*.html']))
-      .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
-      .pipe(autoprefixer(['last 5 versions']))
+      // .pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
+      // .pipe(purify(['app/**/*.js', 'app/**/*.html']))
+      // .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
+      // .pipe(autoprefixer(['last 5 versions']))
       .pipe(rename({ suffix: '.min', prefix: '' }))
       .pipe(gulp.dest('app/css'))
       .pipe(browsersync.reload({ stream: true }))
@@ -52,14 +52,14 @@ gulp.task('images', () => {
 gulp.task('scripts', () => {
   return gulp
     .src([
-      'app/libs/jquery/dist/jquery.min.js',
+      'app/libs/jquery/jquery.min.js',
       "app/libs/bootstrap/popper.min.js",
       "app/libs/bootstrap/bootstrap.min.js",
       "app/libs/owl-carusel/owl.carousel.min.js",
       'app/js/core.js' // Always at the end
     ])
     .pipe(concat('scripts.min.js'))
-    .pipe(uglify()) // (Opt.)
+    // .pipe(uglify()) // (Opt.)
     .pipe(gulp.dest('app/js'))
     .pipe(browsersync.reload({ stream: true }));
 });

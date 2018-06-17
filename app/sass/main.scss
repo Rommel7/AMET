@@ -19,6 +19,18 @@ $main-grey: #9c9d9d;
 $secondary-grey: #6f6f6e;
 $main-black: #333;
 //
+// Tools
+$transparent: rgba(0, 0, 0, 0.01);
+//  Mixins
+@mixin text-normal($norm) {
+  font-weight: $norm;
+  font-style: $norm;
+  font-stretch: $norm;
+  line-height: $norm;
+  letter-spacing: $norm;
+}
+
+//
 /*================================
             Libraries
   ================================*/
@@ -53,6 +65,8 @@ $main-black: #333;
 ================================*/
 
 .fullpage-slider {
+  background: url(../img/layers/texture.png) #fff repeat;
+  width: 100%;
   .carousel-item {
     img {
       height: 800px;
@@ -60,6 +74,12 @@ $main-black: #333;
     .carousel-caption {
       background-color: rgba(51, 51, 51, 0.3);
     }
+  }
+  .carousel-control-prev, .carousel-control-next{
+    width: 5%;
+    top: 50%;
+    background-color: rgba(51, 51, 51, 0.3);
+    transform: translateY(-50%);
   }
 }
 
@@ -171,7 +191,7 @@ $main-black: #333;
 
 .partners {
   .row-partners {
-    padding: 35px 0;
+    padding: 0 0 40px 0;
     align-items: center;
     .partners-logo {
       max-height: 300px;

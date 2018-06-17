@@ -19,6 +19,18 @@ $main-grey: #9c9d9d;
 $secondary-grey: #6f6f6e;
 $main-black: #333;
 //
+// Tools
+$transparent: rgba(0, 0, 0, 0.01);
+//  Mixins
+@mixin text-normal($norm) {
+  font-weight: $norm;
+  font-style: $norm;
+  font-stretch: $norm;
+  line-height: $norm;
+  letter-spacing: $norm;
+}
+
+//
 //Styles
 .static-info-pages {
   margin: 50px 0px; //Title
@@ -30,6 +42,7 @@ $main-black: #333;
       display: inline-block;
       padding-bottom: 5px;
       border-bottom: 2px solid $main-orange;
+      @include text-normal(normal);
     }
   } //
   //Image
@@ -41,11 +54,15 @@ $main-black: #333;
   .static-content {
     margin: 30px 0px;
     h3 {
+      @include text-normal(normal);
       font-size: $ftz-18;
       font-weight: 600;
       &::before {
         content: '◽ ';
       }
+    }
+    p {
+      @include text-normal(normal);
     }
     .excerpt {
       text-indent: 20px;
@@ -198,15 +215,18 @@ $main-black: #333;
       margin-top: 30px;
       display: flex;
       justify-content: space-between;
+
       img {
         width: 300px;
         height: auto;
         margin-right: 35px;
       }
       .text {
+        @include text-normal(normal);
         h4 {
           font-size: $ftz-20;
           font-weight: 600;
+          color: $main-black;
         }
         p {
           font-size: $nav-16;
@@ -215,7 +235,25 @@ $main-black: #333;
     }
     .item-table {
       margin-top: 50px;
-      border-top: 1px solid $main-orange;
+      border-bottom: 1px solid $secondary-orange;
+      .row {
+        justify-content: center;
+        .media {
+          margin: 30px;
+          align-items: center;
+          border: 1px solid $main-grey;
+          border-radius: 10px;
+          padding: 10px;
+          .media-body {
+            h5 {
+              @include text-normal(normal);
+              font-size: $nav-16;
+              color: $main-black;
+              font-weight: 600;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,13 +1,15 @@
 const gulp = require('gulp'),
       browsersync = require('browser-sync'),
       sass = require('gulp-sass'),
+      uncss = require('gulp-uncss'),
+      purify = require("gulp-purify-css"),
+      cssnano = require('gulp-cssnano'),
       autoprefixer = require('gulp-autoprefixer'),
       cleancss = require('gulp-clean-css'),
-      purify = require("gulp-purify-css"),
-      uncss = require('gulp-uncss'),
       imagemin = require('gulp-imagemin'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
+      htmlmin = require('gulp-htmlmin');
       rename = require('gulp-rename'),
       notify = require('gulp-notify');
 
@@ -24,16 +26,24 @@ gulp.task('browser-sync', () => {
   });
 });
 
+// HTML Minify
+gulp.task('minify', function() {
+  return gulp.src('app/**.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('app'));
+});
+
 //Task for styles
 gulp.task('styles', () => {
   return (
     gulp
       .src('app/sass/**/*.scss')
       .pipe(sass({ outputStyle: 'expand' }).on('error', notify.onError()))
-      .pipe(uncss({html: ['app/index.html', 'app/**/*.html', 'http://localhost:3000']})) // (Opt.)
+      .pipe(uncss({html: ['app/**.html', 'http://localhost:3000']})) // (Opt.)
       .pipe(purify(['app/**/*.js', 'app/**/*.html']))
-      .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
+      .pipe(cssnano())
       .pipe(autoprefixer(['last 5 versions']))
+      .pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // (Opt.)
       .pipe(rename({ suffix: '.min', prefix: '' }))
       .pipe(gulp.dest('app/css'))
       .pipe(browsersync.reload({ stream: true }))

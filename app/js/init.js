@@ -1,12 +1,10 @@
-'use strict';
-
-$(window).on('load', function () {
-  setTimeout(function () {
+$(window).on('load', () => {
+  setTimeout(() => {
     $('.loading-overlay').hide();
   }, 1000);
 });
 
-$(document).ready(function () {
+$(document).ready(() => {
   $('.owl-two').owlCarousel({
     items: 5,
     loop: true,
@@ -23,27 +21,27 @@ $(document).ready(function () {
     dots: true
   });
 
-  setTimeout(function () {
+  setTimeout(() => {
     $('header, footer').hide();
   }, 60000 * 30);
 
   if (top.location.pathname === '/certificates.html') {
-    (function () {
-      var modal = document.getElementById("myModal");
-      var span = document.getElementById("close");
+    (() => {
+      let modal = document.getElementById("myModal");
+      let span = document.getElementById("close");
 
-      var images = document.getElementsByClassName("myImg");
-      var modalImg = document.getElementById("img01");
+      let images = document.getElementsByClassName("myImg");
+      let modalImg = document.getElementById("img01");
 
-      var i = void 0;
+      let i;
       for (i = 0; i < images.length; i++) {
-        images[i].onclick = function () {
+        images[i].onclick = () => {
           modal.style.display = "block";
           modalImg.src = this.src;
           modalImg.alt = this.alt;
         };
       }
-      span.onclick = function () {
+      span.onclick = () => {
         modal.style.display = "none";
       };
 

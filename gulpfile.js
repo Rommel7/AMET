@@ -7,6 +7,7 @@ const gulp = require('gulp'),
       autoprefixer = require('gulp-autoprefixer'),
       cleancss = require('gulp-clean-css'),
       imagemin = require('gulp-imagemin'),
+      babel = require('gulp-babel'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
       htmlmin = require('gulp-htmlmin');
@@ -33,6 +34,23 @@ gulp.task('minify', function() {
     .pipe(gulp.dest('app'));
 });
 
+//Task for images
+gulp.task('images', () => {
+  gulp
+    .src('app/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('app/img'));
+});
+
+// Babel
+gulp.task('es6', () => {
+  return gulp
+  .src('app/js/init.js')
+  .pipe(babel({presets: ['env']}))
+  .pipe(rename('core.js'))
+  .pipe(gulp.dest('app/js/'))
+})
+
 //Task for styles
 gulp.task('styles', () => {
   return (
@@ -48,14 +66,6 @@ gulp.task('styles', () => {
       .pipe(gulp.dest('app/css'))
       .pipe(browsersync.reload({ stream: true }))
   );
-});
-
-//Task for images
-gulp.task('images', () => {
-  gulp
-    .src('app/img/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('app/img'));
 });
 
 //Task for scripts
@@ -75,7 +85,7 @@ gulp.task('scripts', () => {
 });
 
 //Watch
-gulp.task('watch', ['styles', 'images', 'scripts', 'browser-sync'], () => {
+gulp.task('watch', [ 'styles', 'images', 'scripts', 'browser-sync'], () => {
   gulp.watch('app/sass/**/*.scss', ['styles']);
   gulp.watch(['libs/**/*.js', 'app/js/core.js'], ['scripts']);
   gulp.watch('app/*.html', browsersync.reload);

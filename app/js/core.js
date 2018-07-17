@@ -1,12 +1,10 @@
-'use strict';
-
-$(window).on('load', function () {
-  setTimeout(function () {
+$(window).on('load', () => {
+  setTimeout(() => {
     $('.loading-overlay').hide();
   }, 1000);
 });
 
-$(document).ready(function () {
+$(document).ready(() => {
   $('.owl-two').owlCarousel({
     items: 5,
     loop: true,
@@ -23,19 +21,14 @@ $(document).ready(function () {
     dots: true
   });
 
-  setTimeout(function () {
-    $('header, footer').hide();
-  }, 60000 * 30);
-
   if (top.location.pathname === '/certificates.html') {
-    (function () {
-      var modal = document.getElementById("myModal");
-      var span = document.getElementById("close");
+    (() => {
+      let images = document.getElementsByClassName("myImgs");
+      let modal = document.getElementById("myModal");
+      let span = document.getElementById("closeBtn");
+      let modalImg = document.getElementById("imgModal");
 
-      var images = document.getElementsByClassName("myImg");
-      var modalImg = document.getElementById("img01");
-
-      var i = void 0;
+      let i;
       for (i = 0; i < images.length; i++) {
         images[i].onclick = function () {
           modal.style.display = "block";
@@ -43,7 +36,7 @@ $(document).ready(function () {
           modalImg.alt = this.alt;
         };
       }
-      span.onclick = function () {
+      span.onclick = () => {
         modal.style.display = "none";
       };
 

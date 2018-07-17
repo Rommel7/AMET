@@ -1,20 +1,25 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "name": "",
-  "description": "",
-  "short_name": "",
+  "name": "AMET",
+  "description": "AMET, Manpower Equipment Transportation",
+  "short_name": "AMET",
   "icons": [{
       "src": "img/favicon/favicon.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
+    },
+    {
+      "src": "img/favicons/favicon.png",
+      "sizes": "16x16 32x32",
+      "type": "image/png"
     }
   ],
-  "scope": "/app",
-  "start_url": "/app/index.html",
+  "scope": "./",
+  "start_url": "./index.html",
   "display": "fullscreen",
   "orientation": "landscape",
-  "theme_color": "#000",
+  "theme_color": "#fbba00",
   "background_color": "#fff",
   "screenshots": [{}]
 }

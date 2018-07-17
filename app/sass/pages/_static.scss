@@ -1,35 +1,5 @@
-// SCSS Varibles
-//
-// Fonts
-$main-font: 'Open Sans',
-sans-serif;
-$ftz-24: 24px;
-$ftz-20: 20px;
-$ftz-18: 18px;
-$nav-16: 16px;
-$link-14: 14px;
-$ftz-12: 12px;
-//
-// Colors
-$main-white: #fff;
-$secondary-white: #eee;
-$main-orange: #fbba00;
-$secondary-orange: #ef7c00;
-$main-grey: #9c9d9d;
-$secondary-grey: #6f6f6e;
-$main-black: #333;
-//
-// Tools
-$transparent: rgba(0, 0, 0, 0.01);
-//  Mixins
-@mixin text-normal($norm) {
-  font-weight: $norm;
-  font-style: $norm;
-  font-stretch: $norm;
-  line-height: $norm;
-  letter-spacing: $norm;
-}
-
+@import "vars";
+@import "mixins";
 //
 //Styles
 .static-info-pages {
@@ -42,7 +12,6 @@ $transparent: rgba(0, 0, 0, 0.01);
       display: inline-block;
       padding-bottom: 5px;
       border-bottom: 2px solid $main-orange;
-      @include text-normal(normal);
     }
   } //
   //Image
@@ -54,16 +23,13 @@ $transparent: rgba(0, 0, 0, 0.01);
   .static-content {
     margin: 30px 0px;
     h3 {
-      @include text-normal(normal);
       font-size: $ftz-18;
       font-weight: 600;
       &::before {
         content: '◽ ';
       }
     }
-    p {
-      @include text-normal(normal);
-    }
+    p {}
     .excerpt {
       text-indent: 20px;
       margin: 20px 0px;
@@ -208,6 +174,7 @@ $transparent: rgba(0, 0, 0, 0.01);
   }
 }
 
+//
 .safety-solution {
   .safety-items {
     margin-top: 50px;
@@ -215,14 +182,12 @@ $transparent: rgba(0, 0, 0, 0.01);
       margin-top: 30px;
       display: flex;
       justify-content: space-between;
-
       img {
         width: 300px;
         height: auto;
         margin-right: 35px;
       }
       .text {
-        @include text-normal(normal);
         h4 {
           font-size: $ftz-20;
           font-weight: 600;
@@ -246,7 +211,6 @@ $transparent: rgba(0, 0, 0, 0.01);
           padding: 10px;
           .media-body {
             h5 {
-              @include text-normal(normal);
               font-size: $nav-16;
               color: $main-black;
               font-weight: 600;
@@ -256,4 +220,12 @@ $transparent: rgba(0, 0, 0, 0.01);
       }
     }
   }
+}
+
+.background-overlay {
+  min-height: 300px;
+  margin: 30px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../img/public/13.jpg');
 }

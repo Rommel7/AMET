@@ -36,7 +36,7 @@ $(document).ready(() => {
           modalImg.alt = this.alt;
         };
       }
-      span.onclick = () => {
+      span.onclick = function () {
         modal.style.display = "none";
       };
 

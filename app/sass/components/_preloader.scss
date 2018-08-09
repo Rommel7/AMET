@@ -90,45 +90,32 @@
   display: block;
   width: 25px;
   height: 25px;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
-  -webkit-animation: folding 2.5s infinite linear both;
-  -moz-animation: folding 2.5s infinite linear both;
-  -ms-animation: folding 2.5s infinite linear both;
-  -o-animation: folding 2.5s infinite linear both;
   animation: folding 2.5s infinite linear both;
 }
 
 @-moz-keyframes folding {
   0% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
@@ -136,32 +123,26 @@
 
 @-o-keyframes folding {
   0% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
@@ -169,32 +150,26 @@
 
 @-ms-keyframes folding {
   0% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
@@ -202,32 +177,26 @@
 
 @-webkit-keyframes folding {
   0% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
@@ -235,32 +204,26 @@
 
 @keyframes folding {
   0% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: perspective(140px) rotateX(180deg);
     transform: perspective(140px) rotateX(180deg);
     opacity: 0;
   }

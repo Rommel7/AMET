@@ -374,10 +374,28 @@ img {
   }
 }
 
-//
-/*================================
-           Navbar
-================================*/
+.breadcrumb {
+  background-color: unset;
+  padding: 5px;
+  background-image: url(../../img/layers/texture.png);
+  .breadcrumb-item {
+    font-size: 14px;
+    color: $secondary-grey;
+    &.active {
+      color: $main-orange;
+    }
+    a:hover {
+      color: $main-orange;
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+=====================================================
+            =   Navbar Section   =
+=====================================================
+*/
 
 .navbar {
   background-color: $secondary-grey;

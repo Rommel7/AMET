@@ -121,8 +121,8 @@ button {
   border-radius: 0;
   &:focus,
   .navbar-toggler-icon {
-    outline: 1px dotted; // Work around a Firefox/IE bug where the transparent `button` background
-    outline: 5px auto; // results in a loss of the default `button` focus styles.
+    // outline: 1px dotted; // Work around a Firefox/IE bug where the transparent `button` background
+    // outline: 5px auto; // results in a loss of the default `button` focus styles.
   }
 }
 
@@ -148,6 +148,10 @@ img {
 @include selection {
   background-color: $secondary-white;
   color: $main-orange;
+}
+
+:focus {
+  outline: none !important;
 }
 
 .img-responsive {
@@ -241,10 +245,6 @@ img {
 
 .container-border-bottom {
   border-bottom: 1px solid $main-grey;
-}
-
-.row-mg-3 {
-  margin: 3% 0%;
 }
 
 .owl-theme {
@@ -421,12 +421,23 @@ img {
   }
   .navbar-collapse {
     .navbar-nav {
+      @media only screen and (max-width: 991.1px) {
+        margin-top: 30px;
+        text-align: center;
+      }
       .nav-item {
         .nav-link {
           color: $secondary-white;
           transition: 0.3s ease;
+          @media only screen and (max-width: 991.1px) {
+            font-size: $font-size-20px;
+          }
           &:hover {
             color: $main-orange;
+            @media only screen and (max-width: 991.1px) {
+              background-color: $main-orange;
+              color: $white;
+            }
           }
           .show {
             color: $main-white;
@@ -436,8 +447,16 @@ img {
           display: block;
           visibility: hidden;
           margin-top: 10px;
+          @media only screen and (max-width: 991.1px) {
+            all: unset;
+          }
           .dropdown-item {
             font-size: $font-size-12px;
+            @media only screen and (max-width: 991.1px) {
+              font-size: $font-size-20px;
+              color: $white;
+              padding: 0.5rem 1rem;
+            }
           }
           &::before {
             display: inline-block;
@@ -452,6 +471,9 @@ img {
             border-bottom: 0.5em solid;
             border-left: 0.5em solid transparent;
             color: $main-white;
+            @media only screen and (max-width: 991.1px) {
+              display: none;
+            }
           }
         }
         &:hover .dropdown-menu {
@@ -459,6 +481,11 @@ img {
           visibility: visible;
           transition: 0.3s ease;
         }
+      }
+    }
+    @media only screen and (max-width: 1070px) {
+      .navbar-nav:last-child {
+        display: none;
       }
     }
   }

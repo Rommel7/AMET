@@ -188,77 +188,92 @@
 .footer {
   background-color: $secondary-grey;
   color: $main-white;
-  .footer-row {
-    padding: 20px 0px;
-    .footer-menu-item {
-      .footer-title {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: $font-size-18px;
-        margin-bottom: 15px;
-      }
-      ul {
-        padding: 0;
-        list-style: none;
-        li {
-          a {
-            font-size: $font-size-16px;
-            color: $secondary-white;
-            text-decoration: none;
-            &:hover {
-              color: $main-orange;
-              transition: 0.3s ease;
-            }
+  padding: 20px 0px;
+  [class*="col-"] {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 450px) {
+      justify-content: center;
+    }
+  }
+  .footer-menu-item {
+    margin-right: 30px;
+    @media only screen and (max-width: 768px) {
+      margin-right: 10px;
+      margin-bottom: 30px;
+      min-width: 200px;
+    }
+    @media only screen and (max-width: 450px) {
+      text-align: center;
+      margin-right: unset;
+    }
+    .footer-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: $font-size-18px;
+      margin-bottom: 10px;
+    }
+    .footer-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        margin: 2.5px 0;
+        a {
+          font-size: $font-size-16px;
+          color: $secondary-white;
+          text-decoration: none;
+          &:hover {
+            color: $main-orange;
+            transition: 0.3s ease;
           }
-          .social-icons {
-            font-size: 30px;
-          }
-          .dropdown {
-            .footer-dropdown {
-              cursor: pointer;
-            }
-            .dropdown-menu {
-              a {
-                font-size: $font-size-16px;
-                color: $main-black;
-              }
-              &::before {
-                display: inline-block;
-                position: absolute;
-                top: -15px;
-                left: 15%;
-                width: 15px;
-                height: 15px;
-                content: "";
-                border-top: 0;
-                border-right: 0.5em solid transparent;
-                border-bottom: 0.5em solid;
-                border-left: 0.5em solid transparent;
-                color: $main-white;
-              }
-            }
-            &:hover .dropdown-menu {
-              display: block;
-              visibility: visible;
-            }
-          }
+        }
+        .social-icons {
+          font-size: 30px;
+        }
+        .custom-select {
+          margin-top: 15px;
         }
       }
     }
-    .about {
-      font-size: $font-size-14px;
-      line-height: 20px;
-      vertical-align: super;
-      color: $main-white;
+  }
+  .footer-menu-item:last-child {
+    margin-right: unset;
+    @media only screen and (max-width: 450px) {
+      display: none;
     }
-    .apps {
-      float: right;
-      margin-top: 15px;
-      .apps-slogan {
-        float: left;
-        margin-right: 15px;
-        font-size: $font-size-14px;
-        line-height: 40px;
+  }
+  .footer-bottom {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 450px) {
+      margin-top: 10px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .copyright {
+      color: $main-white;
+      font-size: $font-size-14px;
+      margin-right: 50px;
+      @media only screen and (max-width: 450px) {
+        order: 2;
+        margin-right: unset;
+        margin-top: 30px;
+      }
+    }
+    .logo {
+      width: fit-content;
+      @media only screen and (max-width: 450px) {
+        order: 1;
+        margin: 0 auto;
+      }
+      .logo-link {
+        img {
+          height: 40px;
+          max-width: initial;
+        }
       }
     }
   }
@@ -271,11 +286,3 @@
 */
 
 @import "pages/static";
-
-/*
-=====================================================
-               =   Media   =
-=====================================================
-*/
-
-@import "responsive";

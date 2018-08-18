@@ -327,7 +327,7 @@ img {
 .dropdown-item:focus {
   color: $main-white;
   text-decoration: none;
-  background-color: $main-orange;
+  background-color: $secondary-orange;
 }
 
 .dropdown-content {
@@ -435,7 +435,7 @@ img {
           &:hover {
             color: $main-orange;
             @media only screen and (max-width: 991.1px) {
-              background-color: $main-orange;
+              background-color: $secondary-orange;
               color: $white;
             }
           }

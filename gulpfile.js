@@ -39,7 +39,7 @@ gulp.task('serve', () => {
     notify: false,
     open: false,
     // tunnel: true,
-    // tunnel: "projectmane", //  Demonstration page: http://projectmane.localtunnel.me
+    // tunnel: "amet", //  Demonstration page: http://amet.localtunnel.me
   });
 });
 

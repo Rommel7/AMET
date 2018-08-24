@@ -29,5 +29,6 @@
     "postcss-uncss": "^0.16.1",
     "uncss": "^0.16.2"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

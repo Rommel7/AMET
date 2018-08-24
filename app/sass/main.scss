@@ -173,8 +173,13 @@
   .row-partners {
     padding: 0 0 40px 0;
     align-items: center;
-    .partners-logo {
-      max-height: 300px;
+    .col {
+      display: flex;
+      justify-content: center;
+      .partners-logo {
+        max-height: 250px;
+        max-width: 150px;
+      }
     }
   }
 }

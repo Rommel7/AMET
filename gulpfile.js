@@ -38,8 +38,8 @@ gulp.task('serve', () => {
     },
     notify: false,
     open: false,
-    // tunnel: true,
-    // tunnel: "amet", //  Demonstration page: http://amet.localtunnel.me
+    tunnel: true,
+    tunnel: "amet", //  Demonstration page: http://amet.localtunnel.me
   });
 });
 

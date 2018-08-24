@@ -70,7 +70,7 @@
   display: inline-block;
   font-size: 0px;
   line-height: normal;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateX(-50%);
 }
 
 .loading-overlay .loading-inner span {

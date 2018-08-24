@@ -1,58 +1,66 @@
-'use strict';
+"use strict";
 
-$(window).on('load', function () {
+window.addEventListener("load", function () {
   setTimeout(function () {
-    $('.loading-overlay').hide();
+    document.querySelector(".loading-overlay").style.display = "none";
   }, 1000);
 });
 
-$(document).ready(function () {
-  $('.owl-two').owlCarousel({
-    items: 5,
+document.addEventListener("DOMContentLoaded", function () {
+  $(".owl-two").owlCarousel({
+    items: 2,
     loop: true,
     nav: false,
-    dots: false,
-    autoplay: true,
+    dots: true,
+    autoplay: false,
     autoplayTimeout: 2500,
-    autoplayHoverPause: true
+    autoplayHoverPause: true,
+    responsive: {
+      480: {
+        items: 3
+      },
+      768: {
+        items: 4
+      },
+      992: {
+        items: 5
+      }
+    }
   });
-  $('.owl-three').owlCarousel({
+  $(".owl-three").owlCarousel({
     items: 6,
     loop: true,
     nav: true,
     dots: true
   });
 
-  if (top.location.pathname === '/certificates.html') {
-    (function () {
-      var images = document.getElementsByClassName("myImgs");
-      var modal = document.getElementById("myModal");
-      var span = document.getElementById("closeBtn");
-      var modalImg = document.getElementById("imgModal");
+  var images = document.querySelectorAll(".myImgs");
+  var modal = document.querySelector("#myModal");
+  var span = document.querySelector("#closeBtn");
+  var modalImg = document.querySelector("#imgModal");
 
-      var i = void 0;
-      for (i = 0; i < images.length; i++) {
-        images[i].onclick = function () {
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          modalImg.alt = this.alt;
-        };
-      }
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
+  images.forEach(function (image) {
+    image.addEventListener("click", function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
 
-      $(document).keyup(function (e) {
-        if (e.keyCode == 27) {
-          modal.style.display = "none";
-        }
-      });
+  document.addEventListener("keyup", function (e) {
+    if (e.keyCode == 27) {
+      modal.style.display = "none";
+    }
+  });
 
-      $(document).click(function (event) {
-        if ($(event.target).closest("#myModal").length) {
-          $("body").find("#myModal").hide();
-        }
-      });
-    })();
+  document.addEventListener("click", function (e) {
+    if (e.target.id === "imgModal") {
+      modal.style.display = "none";
+    }
+  });
+  if (span) {
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
   }
 });

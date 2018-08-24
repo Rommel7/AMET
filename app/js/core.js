@@ -6,31 +6,33 @@ window.addEventListener("load", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  $(".owl-two").owlCarousel({
-    items: 2,
+
+  let swiper = new Swiper('.swiper-container', {
+    slidesPerView: 5,
+    spaceBetween: 30,
     loop: true,
-    nav: false,
-    dots: true,
-    autoplay: false,
-    autoplayTimeout: 2500,
-    autoplayHoverPause: true,
-    responsive: {
+    autoplay: {
+      delay: 2500,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+    breakpoints: {
       480: {
-        items: 3
+        slidesPerView: 2,
+        spaceBetween: 60
       },
-      768: {
-        items: 4
+      778: {
+        slidesPerView: 3,
+        spaceBetween: 40
       },
       992: {
-        items: 5
+        slidesPerView: 4,
+        spaceBetween: 20
       }
     }
-  });
-  $(".owl-three").owlCarousel({
-    items: 6,
-    loop: true,
-    nav: true,
-    dots: true
   });
 
   let images = document.querySelectorAll(".myImgs");

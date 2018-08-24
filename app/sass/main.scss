@@ -119,56 +119,22 @@
 */
 
 .brands {
-  .row-brands {
-    padding: 35px 0 0;
-    margin: 0;
-    .owl-nav {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      .owl-prev,
-      .owl-next {
-        width: 40px;
-        height: 40px;
-        line-height: 30px;
-        border: 1px solid $secondary-orange;
-        margin: 0 5px;
-        border-radius: 4px;
-        outline: none;
-        transition: 0.3s ease;
-        @media only screen and (max-width: 768px) {
-          display: none;
-        }
-        &:hover {
-          border: 1px solid $main-black;
-          span {
-            color: $main-black;
-          }
-        }
-        span {
-          transition: 0.3s ease;
-          font-size: 30px;
-          color: $secondary-orange;
-        }
-      }
-    }
+  .headline {
+    margin-top: 40px;
+    margin-bottom: 0;
   }
   .brand-logo {
-    width: 250px;
-    height: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    @media only screen and (max-width: 768px) {
-      width: unset;
-      margin: 0 30px;
-    }
-    img {
-      max-width: 190px;
-      max-height: 90px;
-      width: auto;
-      @media only screen and (max-width: 768px) {
-      }
+    height: 250px;
+    cursor: pointer;
+  }
+  .swiper-pagination {
+    margin-top: 50px;
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: $main-orange;
     }
   }
 }
@@ -192,6 +158,9 @@
     .collaborators-logo {
       width: 130px;
       margin: 0 15px;
+      @media only screen and (max-width: 992px) {
+        margin: 20px 15px;
+      }
     }
   }
 }

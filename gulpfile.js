@@ -38,8 +38,8 @@ gulp.task('serve', () => {
     },
     notify: false,
     open: false,
-    tunnel: true,
-    tunnel: "amet", //  Demonstration page: http://amet.localtunnel.me
+    // tunnel: true,
+    // tunnel: "amet", //  Demonstration page: http://amet.localtunnel.me
   });
 });
 
@@ -170,6 +170,7 @@ Scripts = () => {
         './app/libs/bootstrap/popper.min.js',
         './app/libs/bootstrap/bootstrap.min.js',
         './app/libs/owl-carusel/owl.carousel.min.js',
+        './app/libs/swiper//swiper.min.js',
         './dist/js/core.js'
       ])
       .pipe(concat('vendors.min.js'))

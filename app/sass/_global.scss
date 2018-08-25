@@ -354,6 +354,16 @@ img {
   }
 }
 
+.table-hover tbody {
+  cursor: pointer;
+}
+.table-hover tbody tr {
+  transition: 0.1s ease;
+}
+.table-hover tbody tr:hover {
+  background-color: $main-grey;
+}
+
 /*
 =====================================================
             =   Navbar Section   =
